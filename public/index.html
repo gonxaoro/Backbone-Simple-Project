@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Add Books Library</title>
+  <meta name="description" content=" " />
+  <meta name="author" content="Formación Amaris Team" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./css/main.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+
+</head>
+<body>
+  <div class="container">
+    <main class="library-app">
+      <div class="page-header">
+        <h1>Simple Library Store with Backbone.js</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-section">
+            <div class="group">
+              <input type="text" id="title" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Title</label>
+            </div>
+            <div class="group">
+              <input type="text" id="author" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Author</label>
+            </div>
+            <div class="group">
+              <input type="text" id="category" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Category</label>
+            </div>
+            <button type="button" id="store-button" class="btn btn-raised" disabled="disabled">Store</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="book-list">
+            <ul class="list-group bmd-list-group-sm" id="book-list">
+
+              <script type="text/template" id="list-template">
+                <a class="list-group-item">
+                  <div class="bmd-list-group-col">
+                    <p class="list-group-item-heading"><%= title %></p>
+                    <p class="list-group-item-text"><%= author %></p>
+                    <p class="list-group-item-text"><%= category %></p>
+                  </div>
+                </a>
+              </script>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+
+<script type="text/javascript" src="js/scripts.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</html>

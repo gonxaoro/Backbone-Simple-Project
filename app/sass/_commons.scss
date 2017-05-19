@@ -1,0 +1,201 @@
+// Colors
+$blue:#2d92dd;
+$lightBlue:#429de0;
+$darkGray:#1a1a1a;
+$vertLightGray:#f4f5f5;
+$lightGray:#757989;
+$white:#fff;
+$black:#000;
+
+$color1:#A83337;
+$color2:#14516E;
+$color3:#423637;
+$color4:#F5EBE5;
+$color5:#907C77;
+
+
+// Common class
+.bold{font-weight:bold;}
+.center{text-align: center;}
+.text-align-right{text-align: right;}
+.right{float:right;}
+.left{float:left;}
+.clear{clear:both;}
+.noMargin{margin:0;}
+.noPadding{padding:0;}
+a:hover{text-decoration:none;}
+
+body{
+  color: $color3;
+  background: $color5;
+}
+
+input{
+  background: transparent;
+}
+
+main{
+  padding: 20px 10px;
+  background: $color4;
+  border-radius: 20px;
+
+  li {
+    list-style: none;
+  }
+
+  .page-header{
+    border-color: $color5;
+
+    h1{
+      padding: 0 20px;
+    }
+  }
+
+  .form-section{
+    padding: 40px 20px;
+
+
+    .group{
+      position:relative;
+      margin-bottom:45px;
+    }
+
+    input{
+      font-size:18px;
+      padding:10px 10px 10px 5px;
+      display:block;
+      width:100%;
+      border:none;
+      border-bottom:1px solid #757575;
+    }
+
+    input:focus{ outline:none;}
+
+    label{
+      color:$color3;
+      font-size:18px;
+      font-weight:normal;
+      position:absolute;
+      pointer-events:none;
+      left:5px;
+      top:10px;
+      transition:0.2s ease all;
+      -moz-transition:0.2s ease all;
+      -webkit-transition:0.2s ease all;
+    }
+
+    input:focus ~ label, input:valid ~ label 		{
+      top:-20px;
+      font-size:14px;
+      color:$color2;
+    }
+
+    .bar 	{ position:relative; display:block; width:100%; }
+    .bar:before, .bar:after 	{
+      content:'';
+      height:2px;
+      width:0;
+      bottom:1px;
+      position:absolute;
+      background:$color2;
+      transition:0.2s ease all;
+      -moz-transition:0.2s ease all;
+      -webkit-transition:0.2s ease all;
+    }
+
+    .bar:before {
+      left:50%;
+    }
+
+    .bar:after {
+      right:50%;
+    }
+
+    input:focus ~ .bar:before, input:focus ~ .bar:after {
+      width:50%;
+    }
+
+    .highlight {
+      position:absolute;
+      height:60%;
+      width:100%;
+      top:25%;
+      left:0;
+      pointer-events:none;
+      opacity:0.5;
+    }
+
+    input:focus ~ .highlight {
+      -webkit-animation:inputHighlighter 0.3s ease;
+      -moz-animation:inputHighlighter 0.3s ease;
+      animation:inputHighlighter 0.3s ease;
+    }
+
+    @-webkit-keyframes inputHighlighter {
+    	from { background:#5264AE; }
+      to 	{ width:0; background:transparent; }
+    }
+    @-moz-keyframes inputHighlighter {
+    	from { background:#5264AE; }
+      to 	{ width:0; background:transparent; }
+    }
+    @keyframes inputHighlighter {
+    	from { background:#5264AE; }
+      to 	{ width:0; background:transparent; }
+    }
+
+    /*Button*/
+    .btn-raised{
+      -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      background-color: $color2;
+      color: $color4;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 18px;
+
+      &:hover{
+        opacity: 0.9;
+      }
+
+      &[disabled]:hover{
+        opacity: 0.65;
+      }
+
+    }
+  }
+
+  .book-list{
+    padding: 40px 20px;
+
+    .list-group-item{
+      background-color: $color4;
+      border-color: $color3;
+
+      &:hover{
+        background-color: $color3;
+
+        .list-group-item-heading{
+          color: $color4;
+          text-decoration: underline;
+        }
+
+        .list-group-item-text{
+          color: white;
+        }
+      }
+
+      .list-group-item-heading{
+        color: $color2;
+        font-weight: bold;
+        font-size: 16px;
+        font-style: italic;
+      }
+
+      .list-group-item-text{
+        color: $color3;
+      }
+    }
+  }
+}

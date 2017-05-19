@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Los perros hambrientos",
+    "author": "Ciro Alegria",
+    "category": "Literatura"
+  },
+  {
+    "title": "Developing Backbone.js Applications",
+    "author": "Addy Osmani",
+    "category": "Tecnologia"
+  },
+  {
+    "title": "La meta",
+    "author": "Eliyahu Goldratt",
+    "category": "Negocios"
+  },
+  {    
+    "title": "Los heraldos negros",
+    "author": "Cesar Vallejo",
+    "category": "Poesia"
+  }
+]
