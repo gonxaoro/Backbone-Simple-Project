@@ -12,17 +12,10 @@ $(function () {
 	});
 
 	$('.group > input').keyup(function() {
-		console.log("s");
-    var empty = false;
-    $('.group > input').each(function() {
-        if ($(this).val()) {
-          $('#store-button').removeAttr('disabled');
-        }else{
-					$('#store-button').attr('disabled', 'disabled');
-				}
-    });
-
+    if($('.group > input').filter(function(){	return $.trim(this.value) === '';}).length > 0 ){
+			$('#store-button').attr('disabled', 'disabled');
+		}else{
+			$('#store-button').removeAttr('disabled');
+		}
   });
-
-
 });
